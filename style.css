@@ -1,0 +1,14 @@
+header{
+	padding-top: 20px;
+	padding-bottom: 20px;
+	background-color: #30353A;
+	color: #ffffff;
+}
+footer{
+	background-color: #30353A;
+	color: #fff;
+	padding: 10px 0px;
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+}
