@@ -1,7 +1,7 @@
 $(document).ready(iniciar)
 
 function iniciar(){
-	$(".prov").click("verHabitantes");
+	$(".prov").click(verHabitantes);
 }
 function verHabitantes(){
 	var paginaDestino;
