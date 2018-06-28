@@ -1,10 +1,11 @@
-var documento;
-documento = $(document);
-documento.ready(iniciar);
+$(document).ready(iniciar)
 
 function iniciar(){
-	$("#albacete").click("verHabitantes");
+	$(".prov").click("verHabitantes");
 }
 function verHabitantes(){
-	$("#habitantes").load("provincias.php?codigo=1");
+	var paginaDestino;
+	paginaDestino = $(this).attr("href");
+	$("#habitantes").load(paginaDestino);
+	return false;
 }
