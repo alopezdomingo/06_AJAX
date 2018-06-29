@@ -3,7 +3,7 @@ $(document).ready(iniciar)
 function iniciar(){
 	$(".prov").click(verHabitantes);
 	$(".zodiaco").click(verSignosZ);
-	$(".zodiaco2").click(verSignosZ2);
+	$(".signos").click(verFuturoZodiaco);
 }
 function verHabitantes(){
 	var paginaDestino;
@@ -18,10 +18,10 @@ function verSignosZ(){
 	return false;
 
 }
-function verSignosZ2(){
-	var verPrediccion2;
-	verPrediccion2= $(this).attr("href");
-	$("#verPred2").load(verPrediccion2);
+function verFuturoZodiaco(){
+	var elFuturo;
+	elFuturo= $(this).attr("href");
+	$("#verFuturo").load(elFuturo);
 	return false;
 
 }
