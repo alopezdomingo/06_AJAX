@@ -4,6 +4,7 @@
 
 
 		$registro=mysqli_query($conexion, "select * from futuro where codigo='$codigo'") or die("Error de consulta");
+		
 		$reg=mysqli_fetch_array($registro);
 		echo "<h2>";
 		echo utf8_encode($reg['signo']);
