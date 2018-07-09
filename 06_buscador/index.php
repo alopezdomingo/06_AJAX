@@ -10,7 +10,7 @@
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
 
 	<script	src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-	<script type="text/javascript" src="pruebaJquery.js"></script>
+	<script type="text/javascript" src="buscadorMuni.js"></script>
 	
 	<link rel="stylesheet" type="text/css" href="../style.css">
 
@@ -25,13 +25,12 @@
 			$registros = mysqli_query($conexion,"select provincia from provincia order by provincia ASC") or die("Error al realizar la consulta");
 		?>
 	    	<form action="buscadorMuni.php"> 
-	    			<select name="verProvincias">
+	    			<select id="provin" name="verProvincias">
 	    			 <?php while ($reg=mysqli_fetch_array($registros))
 			  {
 				  ?>
-	    			
-	    				<option ><?php echo utf8_encode($reg['provincia']);?>
-	    					
+	    				<option id="<?php echo $reg['idprovincia'] ?>">
+	    					<?php echo utf8_encode($reg['provincia']);?>
 	    				</option>
 	    			<?php
 			  }
