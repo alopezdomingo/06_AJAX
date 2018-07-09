@@ -30,12 +30,15 @@
 			  {
 				  ?>
 	    			
-	    				<option><?php echo utf8_encode($reg['provincia']);?></option>
-	    			</select>
-	    		<?php
+	    				<option ><?php echo utf8_encode($reg['provincia']);?>
+	    					
+	    				</option>
+	    			<?php
 			  }
 			  mysqli_close($conexion);
-				?>	    		
+				?>	
+	    			</select>
+	    		    		
 	    		<div id="consulta">
 					<div id="datos"></div>
 	    		</div>
