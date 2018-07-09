@@ -1,4 +1,4 @@
-	<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
 	<meta charset="UTF-8">
@@ -22,14 +22,14 @@
 	    <div class="col-md-12 mt-4">
 	    	<?php
 			$conexion = mysqli_connect("localhost","root","","spain") or die("Error al conectar con la base de datos");
-			$registros = mysqli_query($conexion,"select provincia from provincia order by provincia ASC") or die("Error al realizar la consulta");
+			$registros = mysqli_query($conexion,"select provincia,idprovincia from provincia order by provincia ASC") or die("Error al realizar la consulta");
 		?>
 	    	<form action="buscadorMuni.php"> 
 	    			<select id="provin" name="verProvincias">
 	    			 <?php while ($reg=mysqli_fetch_array($registros))
 			  {
 				  ?>
-	    				<option id="<?php echo $reg['idprovincia'] ?>">
+	    				<option class="ieja" value="<?php echo $reg['idprovincia']; ?>">
 	    					<?php echo utf8_encode($reg['provincia']);?>
 	    				</option>
 	    			<?php
@@ -39,8 +39,10 @@
 	    			</select>
 	    		    		
 	    		<div id="consulta">
-					<div id="datos"></div>
-	    		</div>
+	    			<select id="datos">
+	    				<option>Seleccione población</option>
+					</select>
+				</div>
 	    	</form>
 	    </div>
 	  </div>
