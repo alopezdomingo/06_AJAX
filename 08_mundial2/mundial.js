@@ -2,24 +2,23 @@ $(document).ready(inicio);
 
 function inicio()
 {
-	$("#btn").click(enviarNumeros)
+	$("#btn").click(enviarNumeros);
 }
 function enviarNumeros(){
 	var n1=$("#num1").prop("value");
 	var n2=$("#num2").prop("value");
-	alert("Has recogido las variables"+n1+ " " + n2)
 
 	$.ajax({
 		url:'sumar.php',
-		type 'GET',
-		data: '{num1:n1,num2:n2}',
+		type: 'get',
+		data: {num1:n1,num2:n2},
 		beforeSend: function(){
-			$("#resultado").html("REalizando la operación...");
-		}
+			$("#resultado").html("Realizando la operación...");
+		},
 		success: function (numero){
 			$("#resultado").html("Suma: "+ numero)
 		}
-	})
+	});
 }
 /*function enviarDatos(){
 	$.ajax({

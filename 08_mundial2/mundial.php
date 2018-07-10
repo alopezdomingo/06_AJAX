@@ -6,7 +6,7 @@
 <html lang="es">
 <head>
 	<meta charset="UTF-8">
-	<title>08. Mundial | Método AJAX</title>
+	<title>08. Suma | Método AJAX</title>
 
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -20,14 +20,20 @@
 
 </head>
 <body>
-	<header><h1 class="ml-5">08. Mundial (Método AJAX)</h1></header>
+	<header><h1 class="ml-5">08. Suma (Método AJAX)</h1></header>
 	<div class="container">
 	  <div class="row">
 	    <div class="col-md-12 mt-5">
 	    	<form>
-	    		 <div class="form-group"><input type="number" placeholder="Introduzca un número" name="" id="num1"></div>
-	    		<div class="form-group"><input type="number" placeholder="Introduzca otro un número" name="" id="num2"></div>
-	    		 <div class="form-group"><button type="button" class="btn btn-success" id="btn">Calcular</button></div>
+	    		 <div class="form-group">
+	    		 	<input id="num1" type="number" placeholder="Introduzca un número" name="" >
+	    		 </div>
+	    		<div class="form-group">
+	    			<input id="num2" type="number" placeholder="Introduzca otro un número" name="">
+	    		</div>
+	    		<div class="form-group">
+	    		 	<button type="button" class="btn btn-success" id="btn">Calcular</button>
+	    		</div>
 	    	</form>
 	    	<div id="resultado"></div>
 	    </div>
