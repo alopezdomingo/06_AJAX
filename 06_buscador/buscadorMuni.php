@@ -18,6 +18,4 @@
 	}
 
 	 	echo json_encode($poblaciones);
-	 
-
  ?>
